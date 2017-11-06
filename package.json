@@ -17,26 +17,17 @@
     "watch:serve": "ts-node --inspect src/server.ts"
   },
   "dependencies": {
-    "@angular/compiler": "^4.3.6",
-    "@angular/core": "^4.3.6",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
     "@types/amqplib": "^0.5.4",
     "amqplib": "^0.5.1",
-    "bigchaindb-driver": "^0.3.0",
-    "class-validator": "^0.7.2",
-    "codelyzer": "^3.1.2",
-    "inject-ts": "^0.1.1",
-    "mongodb": "^2.2.30",
-    "mongoose": "^4.11.1",
-    "restify": "^5.0.0",
-    "rxjs": "^5.4.3",
+    "codelyzer": "^4.0.1",
+    "rxjs": "^5.5.2",
     "tsc": "^1.20150623.0",
     "tslint": "^5.5.0",
-    "typescript": "^2.4.1",
-    "validator.ts": "^0.2.2"
+    "typescript": "^2.4.1"
   },
   "devDependencies": {
-    "@types/mongodb": "^2.2.7",
-    "@types/mongoose": "^4.7.18",
     "@types/restify": "^5.0.0",
     "nodemon": "^1.11.0",
     "ts-node": "^3.2.0"

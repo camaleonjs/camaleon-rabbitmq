@@ -1,21 +1,32 @@
 {
-  "name": "rabbitmq-typescript",
+  "name": "camaleon-rabbitmq",
   "version": "1.0.0",
   "description": "RabbitMQ producer/consumer templete using NodeJS and Typescript.",
-  "main": "./",
-  "license": "ISC",
-  "author": {
-    "name": "Rafael Vargas",
-    "email": "raafvargas@hotmail.com"
-  },
   "scripts": {
-    "build": "npm run build-ts && npm run tslint && echo Build finished!",
-    "build-ts": "tsc",
-    "build-watch": "tsc -w",
-    "tslint": "tslint -c tslint.json -p tsconfig.json",
-    "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
-    "watch:serve": "ts-node --inspect src/server.ts"
+      "prepare": "npm run build",
+      "start": "npm install && npm build && npm run watch",
+      "build": "npm run build-ts && npm run tslint && echo Build finished!",
+      "build-ts": "tsc",
+      "build-watch": "tsc -w",
+      "tslint": "tslint -c tslint.json -p tsconfig.json",
+      "watch": "nodemon -e ts -w ./src -x npm run watch:serve",
+      "watch:serve": "ts-node --inspect src/server.ts"
   },
+  "author": {
+      "name": "CamaleonJS",
+      "url": "https://github.com/camaleonjs"
+  },
+  "contributors": [
+      {
+          "name": "Guilherme Firmiano Gonçalve",
+          "email": "firmiano_g@hotmail.com"
+      },
+      {
+          "name": "Rafael Vargas",
+          "email": "raafvargas@hotmail.com"
+      }
+  ],
+  "license": "ISC",
   "dependencies": {
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
@@ -31,5 +42,9 @@
     "@types/restify": "^5.0.0",
     "nodemon": "^1.11.0",
     "ts-node": "^3.2.0"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/camaleonjs/camaleon-rabbitmq.git"
   }
 }

@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var rabbit_subscriber_interface_1 = require("./rabbitmq/rabbit-subscriber.interface");
+var rabbit_subscriber_interface_1 = require("./rabbit-subscriber.interface");
 var BrokerStartup = /** @class */ (function () {
     function BrokerStartup(address, queue, handler) {
         this.address = address;
@@ -59,4 +59,3 @@ var BrokerStartup = /** @class */ (function () {
     return BrokerStartup;
 }());
 exports.BrokerStartup = BrokerStartup;
-//# sourceMappingURL=broker-startup.js.map

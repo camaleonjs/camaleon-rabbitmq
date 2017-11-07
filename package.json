@@ -1,11 +1,13 @@
 {
   "name": "camaleon-rabbitmq",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "description": "RabbitMQ producer/consumer templete using NodeJS and Typescript.",
   "scripts": {
       "prepare": "npm run build",
       "start": "npm install && npm build && npm run watch",
-      "build": "npm run build-ts && npm run tslint && echo Build finished!",
+      "build": "rm -rf dist && npm run build-ts && npm run tslint && echo Build finished!",
       "build-ts": "tsc",
       "build-watch": "tsc -w",
       "tslint": "tslint -c tslint.json -p tsconfig.json",

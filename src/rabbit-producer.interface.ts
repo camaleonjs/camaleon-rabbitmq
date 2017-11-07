@@ -1,6 +1,6 @@
 import * as amqp from 'amqplib';
-import { Message } from '../message';
-import { IProducer } from '../producer.interface';
+import { Message } from './message';
+import { IProducer } from './producer.interface';
 
 export class RabbitProducer implements IProducer {
     constructor(private address: string) {

@@ -1,8 +1,8 @@
 import * as amqp from 'amqplib';
 import { Message } from 'amqplib';
-import * as broker from '../message';
-import { IHandler } from '../handler.interface';
-import { ISubscriber } from '../subscriber.interface';
+import * as broker from './message';
+import { IHandler } from './handler.interface';
+import { ISubscriber } from './subscriber.interface';
 
 export class RabbitSubscriber<T extends broker.Message> implements ISubscriber<T> {
     constructor(private address: string) {

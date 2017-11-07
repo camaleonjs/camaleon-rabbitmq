@@ -6,4 +6,3 @@ var Message = /** @class */ (function () {
     return Message;
 }());
 exports.Message = Message;
-//# sourceMappingURL=message.js.map

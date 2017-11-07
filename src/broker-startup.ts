@@ -1,7 +1,7 @@
 import { Message } from './message';
 import { IHandler } from './handler.interface';
 import { ISubscriber } from './subscriber.interface';
-import { RabbitSubscriber } from './rabbitmq/rabbit-subscriber.interface';
+import { RabbitSubscriber } from './rabbit-subscriber.interface';
 
 export class BrokerStartup<T extends Message> {
     private subscriber: ISubscriber<T>;
@@ -15,4 +15,3 @@ export class BrokerStartup<T extends Message> {
         await this.subscriber.subscribe(this.queue, this.handler);
     }
 }
-

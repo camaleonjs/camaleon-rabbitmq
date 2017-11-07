@@ -1,6 +1,6 @@
 {
   "name": "camaleon-rabbitmq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RabbitMQ producer/consumer templete using NodeJS and Typescript.",
   "scripts": {
       "prepare": "npm run build",

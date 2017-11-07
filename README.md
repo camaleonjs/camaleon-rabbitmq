@@ -20,10 +20,10 @@ Camaleon RabbitMQ gives you two basic Pub/Sub functionalities: Producers and Sub
 ### Producers
 
 ```javascript
-import { ExampleMessage } from './example.message';
+import { ExampleMessage } from '../example.message';
 import { IProducer, RabbitProducer } from 'camaleon-rabbitmq';
 
-const brokerAddress = process.env.BROKER_ADDRESS;
+const brokerAddress = process.env.BROKER_ADDRESS || 'amqp://guest:guest@localhost:5672';
 const producer: IProducer = new RabbitProducer(brokerAddress);
 const exchangeName = 'example-message';
 
@@ -31,22 +31,22 @@ const message = new ExampleMessage();
 producer.produce<ExampleMessage>(exchangeName, message);
 
 ```
-You can find more examples of producers at [this repository](https://github.com/raafvargas/rabbitmq-typescript).
+You can find more examples of producers at [this repository](https://github.com/camaleonjs/camaleon-rabbitmq-samples).
 
 
 ### Subscribers
 
 ```javascript
-import { ExampleHandler } from 'camaleon-rabbitmq';
-import { ExampleMessage } from './example.message';
+import { ExampleHandler } from './example.handler';
+import { ExampleMessage } from '../example.message';
 import { BrokerStartup, IHandler } from 'camaleon-rabbitmq';
 
-const brokerAddress = process.env.BROKER_ADDRESS;
+const brokerAddress = process.env.BROKER_ADDRESS || 'amqp://guest:guest@localhost:5672';
 const exchangeName = 'example-message';
 const broker = new BrokerStartup(
-	brokerAddress, exchangeName, new ExampleHandler());
+    brokerAddress, exchangeName, new ExampleHandler());
 
 broker.Run();
 
 ```
-You can find more examples of subscribers at [this repository](https://github.com/raafvargas/rabbitmq-typescript).
+You can find more examples of subscribers at [this repository](https://github.com/camaleonjs/camaleon-rabbitmq-samples).
